@@ -1,0 +1,67 @@
+{
+  "exercise": "1",
+  "culture": "vi-VN",
+  "results": [
+    {
+      "name": "total_270000",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "discount_100",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "discount_zero",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty_txtUnitPrice",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập Đơn giá hợp lệ (số dương)."
+    },
+    {
+      "name": "letters_txtUnitPrice",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập Đơn giá hợp lệ (số dương)."
+    },
+    {
+      "name": "empty_txtQuantity",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập Số lượng khách hợp lệ (số nguyên dương)."
+    },
+    {
+      "name": "letters_txtQuantity",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập Số lượng khách hợp lệ (số nguyên dương)."
+    },
+    {
+      "name": "empty_txtDiscount",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập % Giảm giá hợp lệ (0 đến 100)."
+    },
+    {
+      "name": "letters_txtDiscount",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập % Giảm giá hợp lệ (0 đến 100)."
+    },
+    {
+      "name": "discount_out_of_range",
+      "pass": true,
+      "actual": "OK\r\n\r\nVui lòng nhập % Giảm giá hợp lệ (0 đến 100)."
+    },
+    {
+      "name": "overflow_handled",
+      "pass": true,
+      "actual": "OK\r\n\r\nGiá trị quá lớn để tính tiền. Vui lòng giảm đơn giá hoặc số lượng."
+    },
+    {
+      "name": "reset",
+      "pass": true,
+      "actual": null
+    }
+  ],
+  "date": "2026-10-08"
+}

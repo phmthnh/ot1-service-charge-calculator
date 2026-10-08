@@ -13,7 +13,7 @@ namespace ServiceChargeCalculator
             // Validate đơn giá
             if (!decimal.TryParse(txtUnitPrice.Text.Trim(), out decimal unitPrice) || unitPrice <= 0)
             {
-                MessageBox.Show("Vui lòng nhập Đơn giá hợp lệ (số dương).", "Lỗi nhập liệu",
+                MessageBox.Show(this, "Vui lòng nhập Đơn giá hợp lệ (số dương).", "Lỗi nhập liệu",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUnitPrice.Focus();
                 return;
@@ -22,7 +22,7 @@ namespace ServiceChargeCalculator
             // Validate số lượng khách
             if (!int.TryParse(txtQuantity.Text.Trim(), out int quantity) || quantity <= 0)
             {
-                MessageBox.Show("Vui lòng nhập Số lượng khách hợp lệ (số nguyên dương).", "Lỗi nhập liệu",
+                MessageBox.Show(this, "Vui lòng nhập Số lượng khách hợp lệ (số nguyên dương).", "Lỗi nhập liệu",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtQuantity.Focus();
                 return;
@@ -31,15 +31,23 @@ namespace ServiceChargeCalculator
             // Validate mã giảm giá (0–100)
             if (!decimal.TryParse(txtDiscount.Text.Trim(), out decimal discount) || discount < 0 || discount > 100)
             {
-                MessageBox.Show("Vui lòng nhập % Giảm giá hợp lệ (0 đến 100).", "Lỗi nhập liệu",
+                MessageBox.Show(this, "Vui lòng nhập % Giảm giá hợp lệ (0 đến 100).", "Lỗi nhập liệu",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDiscount.Focus();
                 return;
             }
 
             // Tính: Tổng = (Đơn giá × Số lượng) × (100 - % Giảm) / 100
-            decimal total = (unitPrice * quantity) * (100 - discount) / 100;
-            lblResult.Text = $"Tổng tiền thanh toán: {total:N0} VNĐ";
+            try
+            {
+                decimal total = (unitPrice * quantity) * ((100 - discount) / 100);
+                lblResult.Text = $"Tổng tiền thanh toán: {total:N0} VNĐ";
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show(this, "Giá trị quá lớn để tính tiền. Vui lòng giảm đơn giá hoặc số lượng.",
+                    "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         // --- Xử lý nút "Làm mới" ---
