@@ -4,9 +4,35 @@
 
 - **Họ và tên:** Phạm Tuấn Thành
 - **Mã số sinh viên:** 24810320264
-- **Lớp:** [Chờ xác nhận lớp]
+- **Lớp:** D19QTANM1
 - **Tên môn học:** Lập trình C# / Windows Forms
 - **Tên bài tập:** Bài 1 — Máy tính tính cước dịch vụ & Giảm giá
+
+---
+
+## KẾT QUẢ THỰC HÀNH
+
+Ảnh chụp từ ứng dụng chạy thực tế trên Windows trong lần kiểm thử ngày **08/10/2026**.
+
+### 1. Ảnh màn hình Giao diện chính
+
+![Giao diện chính](./screenshots/main_ui.png)
+
+Form nhập đơn giá, số lượng khách, phần trăm giảm giá và hiển thị tổng tiền.
+
+### 2. Ảnh màn hình Chức năng thực thi / Kết quả
+
+![Thực thi chức năng](./screenshots/execution_result.png)
+
+Đơn giá 100.000 VNĐ, 3 khách, giảm 10%: tổng tiền 270.000 VNĐ.
+
+### 3. Ảnh màn hình Kiểm tra lỗi (Validation)
+
+![Kiểm tra lỗi](./screenshots/validation_error.png)
+
+Để trống đơn giá và bấm Tính tiền: chương trình yêu cầu nhập đơn giá hợp lệ, là số dương.
+
+---
 
 ## MÔ TẢ BÀI TẬP
 
@@ -63,22 +89,6 @@ Xem [bảng kiểm thử](./docs/TESTING.md) và [kết quả chạy](./docs/tes
 
 Giá và số lượng phải > 0; số lượng là số nguyên. Giảm giá nhận cả 0% và 100%.
 
-## KẾT QUẢ THỰC HÀNH
-
-### 1. Giao diện chính
-
-![Giao diện chính](./screenshots/main_ui.png)
-
-### 2. Chức năng thực thi / Kết quả
-
-![Thực thi chức năng](./screenshots/execution_result.png)
-
-### 3. Kiểm tra lỗi / Validation
-
-![Kiểm tra lỗi](./screenshots/validation_error.png)
-
-Thư mục `screenshots/` dùng để lưu ảnh chạy thực tế. Giữ đúng tên ảnh trên để README hiển thị trực tiếp trên GitHub.
-
 ## QUY TRÌNH NỘP VÀ PUSH
 
 Repo đã được khởi tạo trên nhánh `main` và liên kết `origin`. Sau khi thay đổi code, README hoặc screenshot, chạy:
@@ -97,9 +107,9 @@ git push -u origin main
 ## CHECKLIST TRƯỚC KHI NỘP
 
 - [x] README có họ tên và MSSV.
-- [ ] README đã điền lớp thật.
-- [ ] `screenshots/` có đủ 3 ảnh chạy thực tế.
-- [ ] Ảnh hiển thị trực tiếp trên trang chính GitHub.
+- [x] README đã điền lớp D19QTANM1.
+- [x] `screenshots/` có đủ 3 ảnh chạy thực tế.
+- [x] Ảnh hiển thị trực tiếp trên trang chính GitHub.
 - [x] `.gitignore` loại tệp build và cấu hình cá nhân của Visual Studio.
 - [x] Repository Public.
-- [x] Mã nguồn bản sửa và tài liệu đã commit/push lên nhánh `main`.
+- [x] Mã nguồn, README và ảnh đã commit/push lên nhánh `main`.
